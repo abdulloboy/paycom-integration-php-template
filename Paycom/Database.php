@@ -40,7 +40,7 @@ class Database
     public static function db()
     {
         if (!self::$db) {
-            $config   = require_once CONFIG_FILE;
+            $config   = require CONFIG_FILE;
             $instance = new self($config);
             self::$db = $instance->new_connection();
         }
